@@ -1,0 +1,9 @@
+---
+- name: Install Microsoft SQL Server 2019
+  win_chocolatey:
+    name: sql-server-2019
+    package_params: "'/SECURITYMODE=SQL /SAPWD={{ mssql__sa_password }} /FEATURES=SQLENGINE'"
+- name: Install SQL Server Management Studio
+  win_chocolatey:
+    name: sql-server-management-studio
+
